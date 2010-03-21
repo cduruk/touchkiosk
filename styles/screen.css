@@ -3,6 +3,10 @@ p{
 	font-weight: bold;
 }
 
+#wrapper{
+	width: 1280px;
+}
+
 .salutation, .instruction{
 	color: #584E4F;
 }
@@ -20,8 +24,35 @@ p{
 	color: #C8C1C1;
 }
 
+#top{
+	position:relative;
+	width: 800px;
+	height: 100px;
+	margin: 0 auto;
+	border-bottom: 1px solid #CCC;
+}
+
+#top p{
+	margin-top:10px;
+}
+
+#top .date{
+	position: absolute;
+	right:100px;
+}
+
+#middle {
+	margin-left:70px;
+}
+
 #upper{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E9E9E9));
+	height: 600px;
+}
+
+#lower{
+	background: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#C3C3C3));
+	height: 200px;
 }
 
 #middle{
@@ -42,6 +73,7 @@ p{
 }
 
 .button_line{
+	margin: 0 auto;
 	width: 900px;
 }
 
@@ -58,7 +90,6 @@ p{
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 1px #555;
 }
-
 
 #big1{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFB3B5), to(#EF525A));
