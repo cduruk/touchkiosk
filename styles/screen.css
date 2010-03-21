@@ -91,6 +91,38 @@ p{
 	text-shadow: 1px 1px 1px #555;
 }
 
+#small_buttons{
+	margin-top:30px;
+	margin-left:240px;
+}
+
+.small_button{	
+	position:relative;
+	float:left;
+	
+	width: 120px;
+	height: 120px;
+	margin: 0 40px;
+	
+	border: 1px solid white;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 2px 2px 2px rgba(170, 170, 170, 0.5);
+	background-color: white;
+}
+
+.small_button .text{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.small_button .text p{
+	margin-bottom:8px;
+	font-size: 15px;
+	color: #858181;
+	letter-spacing: 1px;
+}
+
 #big1{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFB3B5), to(#EF525A));
 }
