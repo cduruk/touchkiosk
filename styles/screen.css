@@ -1,0 +1,66 @@
+p{
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+#upper{
+	background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E9E9E9));
+}
+
+.big_button{
+	position:relative;
+	
+	width: 164px;
+	height: 164px;
+	margin: 10px;
+	
+	border: 1px solid white;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 2px 2px 2px rgba(170, 170, 100, 0.5)
+}
+
+.big_button .text{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.big_button .text p{
+	margin-bottom:8px;
+	font-size: 26px;
+	color: white;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px #555;
+}
+
+#big1{
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFB3B5), to(#EF525A));
+}
+
+#big2{
+	background: -webkit-gradient(linear, left top, left bottom, from(#AFBFF8), to(#5B7ACC));
+}
+
+#big3{
+	background: -webkit-gradient(linear, left top, left bottom, from(#B6E7F3), to(#61C3E8));
+}
+
+#big4{
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFD580), to(#FF9300));
+}
+
+#big5{
+	background: -webkit-gradient(linear, left top, left bottom, from(#94EA90), to(#4BC050));
+}
+
+#big6{
+	background: -webkit-gradient(linear, left top, left bottom, from(#E49AD3), to(#C545AC));
+}
+
+#big7{
+	background: -webkit-gradient(linear, left top, left bottom, from(#F5F259), to(#E5CA00));
+}
+
+#big8{
+	background: -webkit-gradient(linear, left top, left bottom, from(#89E8CD), to(#00B591));
+}
