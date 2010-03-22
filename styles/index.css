@@ -1,3 +1,46 @@
+/**** Home Page ****/
+
+#index #top #top_main .big_button{
+  position:relative;
+	float:left;
+	
+	width: 164px;
+	height: 164px;
+	margin-right: 40px;
+  margin-bottom: 40px;
+  	
+	border: 1px solid white;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 7px 6px 6px rgba(170, 170, 170, 0.5);
+	
+	text-align:center;
+}
+
+#index #top #top_main .big_button p{
+  position:absolute;
+  bottom:5px;
+  margin:3px 20px;
+  
+  line-height: 1em;
+  font-size: 1.5em;
+  
+  color:white;
+  text-shadow: 1px 1px 1px #555;	
+}
+
+#index #top #top_main div.big_button:last-child{
+  margin-right:0px;
+}
+
+#index #top #top_main{
+  padding-top:30px;
+}
+
+#index #top #top_main #big_first_line, #index #top #top_main #big_second_line{
+  width: 800px;
+  margin: 0 auto;
+}
+
 #big1{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFB3B5), to(#EF525A));
 }

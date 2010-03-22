@@ -1,0 +1,16 @@
+#pulse1 #top #messages p:first-child{
+  color: #76C2E5;
+}
+
+#pulse1 #top #top_main #images{
+  padding-top:40px;
+  margin-left:10px;
+}
+
+#pulse1 #top #top_main #images img{
+  border:1px solid #B0B0B0;
+}
+
+#pulse1 #top #top_main #images img:first-child{
+  margin-right:40px;
+}
