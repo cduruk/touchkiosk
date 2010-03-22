@@ -12,6 +12,10 @@ p{
 	font-weight: bold;
 }
 
+.fancy{
+	color:#62C358;
+}
+
 #wrapper{
 	width: 1280px;
 	top:0;
