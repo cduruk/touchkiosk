@@ -2,7 +2,7 @@ body {
 	position:relative;
 	overflow-x:hidden;
 	overflow-y:hidden;
-	cursor:none;
+	cursor:url(images/transparent.png),none;
 	top:0;
 	left:0;
 }

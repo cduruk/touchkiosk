@@ -4,6 +4,8 @@ document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 133px; 
 document.body.addEventListener('mousemove',captureMousePosition,false);
 document.body.addEventListener('mousedown',captureMouseClick,false);
 
+document.body.style.cursor = 'none';
+
 // Default values for mouse position
 var mouseX = 0;
 var mouseY = 0;
@@ -76,7 +78,7 @@ midanimation++;
     setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.2';", 700);
     setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.1';", 800);
     setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0';", 900);
-    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.left = '-90px';", 900);
-    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.left = '-90px';", 900);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.left = '-290px';", 900);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.left = '-290px';", 900);
   }
 }
