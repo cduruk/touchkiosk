@@ -91,7 +91,7 @@ p{
 	margin: 0 auto;
 }
 
-#pulse2 #diagrams{
+#pulse #diagrams{
 	padding-top: 50px;
 	padding-bottom: 50px;
 	width:800px;
@@ -103,7 +103,7 @@ p{
 	margin-left:110px;
 }
 
-#pulse2 #diagrams img{
+#pulse #diagrams img{
 	padding: 4px;
 	border:1px solid black;
 }
