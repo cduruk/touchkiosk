@@ -1,4 +1,8 @@
-document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 133px; height: 135px; opacity: 0; position: absolute;"><img src="images/toucheffect.png"></div><embed src="sounds/BLOOP.WAV" hidden=true autostart=true loop=false id="clicksound" type="audio/wav" name="clicksound" mastersound>')
+document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 133px; height: 135px; opacity: 0; position: absolute;"><img src="images/toucheffect.png"></div><div id="insertsound"></div><embed src="sounds/BLOOP.WAV" hidden=true autostart=false loop=false id="clicksoundpreload" type="audio/wav" name="clicksoundpreload" mastersound>')
+
+function dosound() {
+	document.getElementById('insertsound').innerHTML = '<embed src="sounds/BLOOP.WAV" hidden=true autostart=true loop=false id="clicksound" type="audio/wav" name="clicksound" mastersound>';
+}
 
 // Listen for mouse movement
 document.body.addEventListener('mousemove',captureMousePosition,false);
