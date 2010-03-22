@@ -55,6 +55,10 @@ p{
 	margin-left:70px;
 }
 
+#pulse #big_buttons{
+	margin: 0 auto;
+}
+
 #upper{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E9E9E9));
 	height: 600px;
@@ -67,6 +71,14 @@ p{
 
 #middle{
 	clear:both;
+}
+
+#pulse #big_buttons{
+	width:900px;
+}
+
+#pulse #big_buttons #press{
+	margin: 0 auto;
 }
 
 .big_button{
@@ -121,7 +133,6 @@ p{
 	-webkit-border-radius: 10px;
 	-webkit-box-shadow: 2px 2px 2px rgba(170, 170, 170, 0.5);
 	background-color: white;
-	
 }
 
 .small_button .text{
@@ -139,8 +150,10 @@ p{
 	margin: 5px 10px;
 }
 
-.big_blue_button{
-	float:left;
+.big_blue_button{	
+	width: 500px;
+	
+	margin:0 auto;
 	
 	border: 1px solid white;
 	-webkit-border-radius: 10px;
@@ -149,7 +162,9 @@ p{
 }
 
 .big_blue_button .text{
-	padding: 20px 60px;
+	padding: 20px 0px;
+	width: 100%;
+	text-align:center;
 }
 
 .big_blue_button .text p{
