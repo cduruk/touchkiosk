@@ -32,7 +32,7 @@ function captureMousePosition(e) {
   }
   
   console.log(mouseX + ' ' + mouseY);
-return true;
+return false;
 }
 
 function captureMouseClick(e) {
@@ -45,7 +45,7 @@ function captureMouseClick(e) {
   lastMouseTime = 0;
   
   console.log(mouseX + ' ' + mouseY);
-return true;
+return false;
 }
 
 midanimation = 0;
