@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>SoundManager: Javascript to Flash Sound API</title>
+<meta name="description" content="A downloadable Javascript-to-Flash communication library providing Javascript-controlled web page audio" />
+<meta name="keywords" content="DHTML audio, javascript sound, javascript audio, DHTML sound, work by Scott Schiller, schillmania, javascript to flash communication" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet" href="style/demo.css" media="all" />
+<script type="text/javascript" src="script/soundmanager.js"></script>
+<script type="text/javascript" src="script/demo.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+ <!-- this is the flash sound container element. -->
+</div>
+
+<div id="top">
+
+ <div id="header">
+  <h1>SoundManager</h1>
+  <h2>Javascript-driven Flash-based Audio</h2>
+ </div>
+
+ <div id="version">
+  <p>Version 1.0.20041003a</p>
+ </div>
+
+ <div class="clear">&nbsp;</div>
+
+</div>
+
+<div class="left">
+
+ <h3>Executive Summary</h3>
+
+ <p>
+  SoundManager is an object-oriented library/API which provides a Javascript interface to control sounds loaded in a hidden Flash movie.
+ </p>
+ <p>
+  A small Flash "stub" movie loads audio files with IDs as assigned by an external XML file. These sounds can then be controlled by the SoundManager Javascript API using predefined methods.
+ </p>
+
+ <h3>Basic Use</h3>
+
+ <p>
+  A sound is loaded into the Flash stub movie via XML such as:
+  <code>&lt;sound id="mySound" href="soundfile.mp3" /&gt;</code>
+ </p>
+
+ <!--code><![CDATA[<sound id="mySound" href="soundfile.mp3" />]]></code-->
+
+ <p>
+  This sound can then be played via the following Javascript: <code>soundManager.play('mySound');</code>
+ </p>
+
+ <p>
+  Refer to the test controls at right, or hit this <a href="basic-example.html">simplified example page</a> for a basic demo.
+ </p>
+
+ <h3>Supported Methods</h3>
+
+ <p>
+  The following methods are defined under SoundManager:
+ </p>
+
+ <dl>
+
+  <dt class="noTop">play(<code>soundID,loopCount</code>)</dt>
+  <dd><em>Plays the sound as specified by <code>soundID</code>, <code>loopCount</code> times.</em></dd>
+  <dd>Parameters:
+   <ul>
+    <li><code>soundID</code>: ID of the sound to be played, as defined in the XML configuration file.</li>
+    <li><code>loopCount</code>: Number of times (default=1) to play the sound.</li>
+   </ul>
+  </dd>
+  <dd>Example:
+   <code>soundManager.play('mySound');</code>
+  </dd>
+
+  <dt>stop(<code>soundID</code>)</dt>
+  <dd><em>Stops the sound as specified by <code>soundID</code>.</em></dd>
+  <dd>Parameters:
+   <ul>
+    <li><code>soundID</code>: ID of sound as defined in XML</li>
+   </ul>
+  </dd>
+  <dd>Example:
+   <code>soundManager.stop('mySound');</code>
+  </dd>
+
+  <dt>setPan(<code>soundID,pan</code>)</dt>
+  <dd><em>Sets the pan of sound <code>soundID</code>.</em></dd>
+  <dd>Paramaters:
+   <ul>
+    <li><code>soundID</code>: ID of sound as defined in XML</li>
+    <li><code>pan</code>: Integer from -100 to 100</li>
+   </ul>
+  </dd>
+  <dd>Example:
+   <code>soundManager.setPan('mySound',-25);</code>
+  </dd>
+
+  <dt>setVolume(<code>soundID,volume</code>)</dt>
+  <dd><em>Sets the volume of sound <code>soundID</code>.</em></dd>
+  <dd>Paramaters:
+   <ul>
+    <li><code>soundID</code>: ID of sound as defined in XML</li>
+    <li><code>volume</code>: Integer from 0 to 100</li>
+   </ul>
+  </dd>
+  <dd>Example:
+   <code>soundManager.setVolume('mySound',75);</code>
+  </dd>
+
+ </dl>
+
+ <h3>Implementation</h3>
+
+ <p>
+  A script include is required for the SoundManager API. A single Flash movie (.swf) provides the stub for loading sounds, and an XML file defines the sounds to be loaded and their corresponding IDs referenced within the API calls.
+ </p>
+
+ <ul>
+  <li><code><a href="script/soundmanager.js">soundmanager.js</a></code>: API library</li>
+  <li><code>soundcontroller.swf</code>: Flash "stub" loader</li>
+  <li><code><a href="sound-config.xml">sound-config.xml</a></code>: Flash sound/script ID definitions</li>
+ </ul>
+
+ <h3>Requirements</h3>
+
+ <p>
+  This functionality requires a browser with Javascript and Flash 6 support, and support for Javascript-to-Flash plug-in communication (see <a href="http://www.macromedia.com/support/flash/publishexport/scriptingwithflash/scriptingwithflash_03.html">Macromedia's "Scripting with Flash"</a> page for exact version and platform details.)
+ </p>
+
+ <p>Testing has been done on the following:</p>
+
+ <ul>
+  <li>IE 5+ (win32)</li>
+  <li>Mozilla FireFox 0.9 (win32)</li>
+  <li>Netscape 7.0 (win32)</li>
+ </ul>
+
+ <h3>Known Issues</h3>
+
+ <dl>
+
+  <dt class="noTop">Seamless Looping</dt>
+  <dd><p>According to Macromedia, looping of imported MP3 audio <a href="http://www.sonify.org/home/feature/remixology/004_prepareloops/page2.html">is not seamless</a>. (Jerks.)</p></dd>
+
+  <dt>Mac Platform</dt>
+  <dd><p>It appears that Javascript-to-Flash communication <a href="http://www.macromedia.com/support/flash/ts/documents/mac_ie_issues.htm#scr">is not supported under ie:Mac</a> due to the way the plug-in is compiled for the OS, so this type of scripted sound is not possible on this platform. Interestingly enough, it has been reported to work under Mozilla Firefox on Linux.</p></dd>
+
+  <dt>Opera</dt>
+  <dd><p>A mysterious beast at best, likely on the "unsupported" list in terms of JS-to-Flash communication.</p></dd>
+
+ </dl>
+
+ <h3>Resources</h3>
+
+ <dl>
+
+  <dt class="noTop">Technical Information</dt>
+  <dd><p><a href="http://actionscript-toolbox.com/soundobject.php">Sound Object Reference</a> - Actionscript.org</p></dd>
+  <dd><p><a href="http://www.macromedia.com/support/flash/ts/documents/loops_pause.htm">Macromedia TechNotes</a>: "Why do my looping sounds pause between loops?</p></dd>
+  <dd><p><a href="http://www.sitepoint.com/article/flash-anthology-5-sound-effects/5">Sound Effects Tutorial</a> (Dynamic MP3 loading via XML) - Sitepoint.com</p></dd>
+
+  <dt>Related Works</dt>
+  <dd><p><a href="http://sonify.org/flashsound/">Sonify.org FlashSound API</a></p></dd>
+  <dd><p>The inspiration source for my initial experiments with JS-to-Flash communication back in 2001. Now a bit dated (and not compatible with Mozilla,) but still a good reference.</p></dd>
+
+  <dt>Credits</dt>
+  <dd>
+   <p class="noBottom">Code by <a href="mailto:improbablyaspammer@schillmania.com" onmouseover="this.href=ihatespam(this.href)">Scott Schiller</a>.</p>
+   <p>Schillmania.com: <a href="http://www.schillmania.com">Personal experimental DHTML site</a></p>
+   <p>Scottschiller.com: <a href="http://www.scottschiller.com">Professional and technical experience portfolio</a></p>
+  </dd>
+
+ </dl>
+
+</div>
+
+<div class="right">
+
+ <fieldset>
+
+  <legend>Test Sounds</legend>
+
+  <p>Click the buttons below to hear the related sound. Each button makes a call to <code>soundManager.play(soundID)</code> when clicked, where <code>soundID</code> is a unique identifier assigned to a sound (eg. an MP3) in the configuration XML file.</p>
+
+  <p>
+   <button onclick="soundManager.play('page')">page</button>
+   <button onclick="soundManager.play('beep')">beep</button>
+   <button onclick="soundManager.play('select')">select</button>
+   <button onclick="soundManager.play('smash0')">smash0</button>
+   <button onclick="soundManager.play('smash1')">smash1</button>
+   <button onclick="soundManager.play('smash2')">smash2</button>
+  </p>
+
+ </fieldset>
+
+ <fieldset>
+
+  <legend>Sound Controls</legend>
+
+  <p>
+   <em>Basics</em>
+   <button onclick="soundManager.play('test',99)">start</button>
+   <button onclick="soundManager.stop('test')">stop</button>
+  </p>
+
+  <p>
+   <em>Pan</em>
+   <button onclick="soundManager.setPan('test',-100)">-100</button>
+   <button onclick="soundManager.setPan('test',-50)">-50</button>
+   <button onclick="soundManager.setPan('test',0)">0</button>
+   <button onclick="soundManager.setPan('test',50)">+50</button>
+   <button onclick="soundManager.setPan('test',100)">+100</button>
+  </p>
+
+  <p>
+   <em>Volume</em>
+   <button onclick="soundManager.setVolume('test',0)">0</button>
+   <button onclick="soundManager.setVolume('test',25)">+25</button>
+   <button onclick="soundManager.setVolume('test',50)">+50</button>
+   <button onclick="soundManager.setVolume('test',75)">+75</button>
+   <button onclick="soundManager.setVolume('test',100)">+100</button>
+  </p>
+
+ </fieldset>
+
+ <fieldset>
+
+  <legend>Error Handling</legend>
+
+  <p>
+   <em>Invalid Sound ID Tests</em>
+   When a method is called on a sound whose ID is not defined in the flash XML file, an exception is thrown. Click the below for examples; this information can be helpful when debugging your own work.
+  </p>
+  <p class="error">Note that this only seems to work under IE:win32 for some reason.</p>
+  <p class="noTop">
+   <button onclick="soundManager.play('someInvalidSoundID')">start</button>
+   <button onclick="soundManager.stop('anotherInvalidSoundID')">stop</button>
+   <button onclick="soundManager.setPan('someGarbageSoundID',0)">Pan 0</button>
+  </p>
+
+ </fieldset>
+
+ <fieldset>
+
+  <legend>Stress Tests</legend>
+
+  <p>
+   <em>Simultaneous Calls</em>
+   Test playing a sound a given number of times. This may help to determine how to avoid potential crashes.
+  </p>
+  <p class="noTop">
+   <button onclick="stressTest('select',8)">select x8</button>
+   <button onclick="stressTest('select',16)">select x16</button>
+   <button onclick="stressTest('select',32)">select x32</button>
+  </p>
+ <p>
+   <button onclick="stressTest('smash0',64)">smash0 x64</button>
+   <button onclick="stressTest('smash1',128)">smash1 x128</button>
+   <button onclick="stressTest('smash2',256)">smash2 x256</button>
+ </p>
+
+ </fieldset>
+
+ <fieldset>
+
+  <legend>Debugger Output</legend>
+
+  <button onclick="document.getElementById('debugContainer').innerHTML=''" style="margin-top:0.5em">Clear</button>
+
+  <div id="debugContainer">
+   <!-- debugger output goes here. -->
+  </div>
+
+ </fieldset>
+
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div id="bottom">
+
+</div>
+
+<script type="text/javascript">soundManagerInit();</script>
+
+</body>
+</html>

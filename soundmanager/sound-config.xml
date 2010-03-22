@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- SoundManager Flash configuration -->
+<!-- Sound IDs are referenced from JS -->
+
+<items baseHref="audio/" defaultVol="100">
+
+ <sound id="page" href="page.mp3" />
+ <sound id="beep" href="beep.mp3" />
+ <sound id="select" href="select.mp3" />
+ <sound id="test" href="gangsta_shit.mp3" />
+ <sound id="smash0" href="glass0.mp3" />
+ <sound id="smash1" href="glass1.mp3" />
+ <sound id="smash2" href="glass2.mp3" />
+
+</items>

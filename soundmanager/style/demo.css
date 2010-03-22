@@ -1,0 +1,216 @@
+body {
+ background:#4984DB url(../image/demo_bg.jpg) repeat-x 0px 0px;
+ color:#fff;
+ font:76% Verdana;
+}
+
+a {
+ color:#99eeff;
+ text-decoration:underline;
+}
+
+a:hover {
+ color:#fff;
+}
+
+button {
+ padding-left:0.35em;
+ padding-right:0.35em;
+ border:1px solid #4477aa;
+ margin-right:1px;
+ background:#2864D0 url(../image/demo_button_bg.jpg) repeat-x 0px 0px;
+ color:#fff;
+ font-weight:bold;
+ font-size:1em;
+ padding:2px 3px;
+}
+
+code {
+ font:0.9em "Terminal","Lucida Console","System";
+ color:#99ddff;
+}
+
+em {
+ display:block;
+ font-weight:bold;
+ font-style:normal;
+ color:#99ccff;
+}
+
+h1, h2 {
+ margin:0px;
+ font:2em Georgia, Verdana, Arial;
+ font-weight:bold;
+ color:#fff;
+}
+
+h2 {
+ font:x-small Verdana;
+ color:#99ccff;
+}
+
+h3 {
+ font:1.25em Georgia,Verdana;
+ font-weight:bold;
+ margin:0px;
+}
+
+hr {
+ height:2px;
+ font-size:1px;
+ color:#999;
+ border-bottom:1px solid #336699;
+ text-align:left;
+}
+
+dl {
+ margin-left:1em;
+}
+
+dl dt {
+ font-weight:bold;
+ border-bottom:1px dashed #99ccff;
+ padding-bottom:2px;
+ margin-top:1.5em;
+ margin-right:2%;
+}
+
+dl dd {
+ margin-left:0px;
+ margin-bottom:0.5em;
+}
+
+dl em {
+ color:#fff;
+ font-weight:normal;
+ padding-bottom:0.5em;
+}
+
+ul {
+ margin-top:0px;
+ padding-left:2em;
+}
+
+* html ul {
+ padding-left:0px;
+ margin-left:2em;
+}
+
+p {
+ line-height:1.35em;
+}
+
+#top {
+ margin:0px 1%;
+ padding:2em;
+ padding-bottom:0.5em;
+ padding-top:1em;
+ margin-bottom:1em;
+ background:#255CC0 url(../image/demo_header_bg.jpg) repeat-x 0px 0px;
+ border:1px solid #1D4A9B;
+}
+
+#header {
+ float:left;
+ display:inline;
+ width:16.5em;
+ margin-left:1%;
+ margin-bottom:1em;
+}
+
+#header h1 {
+ padding-bottom:1px;
+ border-bottom:1px solid #4E95F7;
+}
+
+#header h2 {
+ border-top:1px solid #336699;
+}
+
+#version {
+ float:right;
+ display:inline;
+ font-size:x-small;
+ margin-top:4.25em;
+}
+
+#version p {
+ margin:0px;
+ color:#6699cc;
+}
+
+#bottom {
+ margin-left:1%;
+ margin-right:2%;
+}
+
+div.left, div.right {
+ float:left;
+ display:inline;
+ font-size:0.9em;
+ padding-right:2%;
+}
+
+div.left {
+ width:44%;
+ margin-left:1%;
+ padding-top:1em;
+ border-right:1px dashed #99ccff;
+}
+
+div.left p {
+ margin:1em 0px;
+}
+
+div.right {
+ width:48%;
+ margin-left:-1px;
+ padding-left:2.5%;
+ border-left:1px dashed #99ccff;
+}
+
+div.right p {
+ margin:0.5em 0px;
+}
+
+fieldset {
+ display:block;
+ margin-top:1em;
+}
+
+fieldset legend {
+ color:#fff;
+ font:1.1em Georgia;
+ font-weight:bold;
+ padding-left:0.2em;
+ padding-right:0.8em;
+}
+
+#debugContainer {
+ font:x-small "Terminal","Lucida Console","System";
+}
+
+#debugContainer div {
+ line-height:1.35em;
+}
+
+.error {
+ background:transparent url(../image/demo_error.gif) no-repeat 0px 0px;
+ text-indent:18px;
+}
+
+.noTop {
+ margin-top:0px !important;
+ padding-top:0px !important;
+}
+
+.noBottom {
+ margin-bottom:0px !important;
+ padding-bottom:0px !important;
+}
+
+.clear {
+ clear:both;
+ font-size:1px;
+ line-height:1px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>SoundManager barebones example</title>
+<script type="text/javascript" src="script/soundmanager.js"></script>
+<style type="text/css">
+
+/* .. To pretty things up a bit. This isn't needed for your usage. */
+
+body {
+ font:76% arial;
+ color:#666;
+}
+
+h1, h2, h3 {
+ font-size:1.2em;
+ margin:0px;
+ margin-bottom:0.5em;
+}
+
+p {
+ margin:0px;
+ margin-bottom:1em;
+}
+
+button {
+ padding-left:0.25em;
+ padding-right:0.25em;
+}
+
+#debugContainer {
+ font:small "Terminal","Lucida Console","System";
+}
+
+</style>
+</head>
+
+<body>
+
+<div>
+ <!-- soundManager appends "hidden" Flash to the first DIV on the page. -->
+</div>
+
+<h1>SoundManager Basic Test Page</h1>
+
+<p>
+ <button onclick="soundManager.play('smash0')">Smash0</button>
+ <button onclick="soundManager.play('smash1')">Smash1</button>
+ <button onclick="soundManager.play('smash2')">Smash2</button>
+</p>
+
+<h2>Looping</h2>
+
+<p>
+ <button onclick="soundManager.play('smash0',3)">Smash0 x3</button>
+</p>
+
+<h2>Pan/Volume</h2>
+
+<p>
+ <button onclick="soundManager.play('test',99)">Start loop</button>
+ <button onclick="soundManager.stop('test')">Stop loop</button>
+</p>
+
+<p>
+ <button onclick="soundManager.setPan('test',-100)">Pan=-100</button>
+ <button onclick="soundManager.setPan('test',-50)">Pan=-50</button>
+ <button onclick="soundManager.setPan('test',0)">Pan=0</button>
+ <button onclick="soundManager.setPan('test',50)">Pan=50</button>
+ <button onclick="soundManager.setPan('test',100)">Pan=100</button>
+</p>
+
+<p>
+ <button onclick="soundManager.setVolume('test',0)">Vol=0</button>
+ <button onclick="soundManager.setVolume('test',25)">Vol=25</button>
+ <button onclick="soundManager.setVolume('test',50)">Vol=50</button>
+ <button onclick="soundManager.setVolume('test',75)">Vol=75</button>
+ <button onclick="soundManager.setVolume('test',100)">Vol=100</button>
+</p>
+
+  <div id="debugContainer">
+   <!-- debugger output goes here. -->
+   <!-- this element can be removed or hidden via CSS as it is optional. -->
+  </div>
+
+<script type="text/javascript">soundManagerInit();</script>
+
+</body>
+</html>
