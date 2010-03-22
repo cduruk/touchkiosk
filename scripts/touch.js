@@ -1,4 +1,4 @@
-document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 133px; height: 135px; opacity: 0; position: absolute;"><img src="images/toucheffect.png"></div><embed src="sounds/BLOOP.WAV" hidden=true autostart=false loop=false name="clicksound" mastersound>')
+document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 133px; height: 135px; opacity: 0; position: absolute;"><img src="images/toucheffect.png"></div><embed src="sounds/BLOOP.WAV" hidden=true autostart=true loop=false id="clicksound" type="audio/wav" name="clicksound" mastersound>')
 
 // Listen for mouse movement
 document.body.addEventListener('mousemove',captureMousePosition,false);
