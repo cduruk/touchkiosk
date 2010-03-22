@@ -36,7 +36,7 @@ p {
 #index #top #messages{
   position:relative;
   height:75px;
-  border-bottom: 1px solid #584E4F;
+  border-bottom: 1px solid #CCC;
 }
 
 #index #top #messages p{
@@ -62,14 +62,37 @@ p {
 	width: 164px;
 	height: 164px;
 	margin-right: 40px;
-
-	
+  margin-bottom: 40px;
+  	
 	border: 1px solid white;
 	-webkit-border-radius: 10px;
-	-webkit-box-shadow: 4px 5px 5px rgba(170, 170, 170, 0.5)
+	-webkit-box-shadow: 7px 6px 6px rgba(170, 170, 170, 0.5);
+	
+	text-align:center;
 }
 
-#index li:last-child div{
+#index .big_button p{
+  position:absolute;
+  bottom:5px;
+  margin:3px 20px;
+  
+  line-height: 1em;
+  font-size: 1.5em;
+  
+  color:white;
+  text-shadow: 1px 1px 1px #555;
+	
+}
+
+#index #top #main div.big_button:last-child{
   margin-right:0px;
 }
 
+#index #top #main{
+  padding-top:30px;
+}
+
+#index #top #main #first_line, #index #top #main #second_line{
+  width: 800px;
+  margin: 0 auto;
+}
