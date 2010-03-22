@@ -1,8 +1,8 @@
-document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 25px; height: 25px; background-color: #c0c0c0; opacity: 0; position: absolute;"></div>')
+document.write('<div id="touchcursor" style="top: 0px; left: 0px; width: 133px; height: 135px; opacity: 0; position: absolute;"><img src="images/toucheffect.png"></div>')
 
 // Listen for mouse movement
-document.onmousemove = captureMousePosition;
-document.onmousedown = captureMouseClick;
+document.body.addEventListener('mousemove',captureMousePosition,false);
+document.body.addEventListener('mousedown',captureMouseClick,false);
 
 // Default values for mouse position
 var mouseX = 0;
@@ -14,7 +14,7 @@ var lastMouseTime = 0;
 
 var timeThreshold = 30;
 
-var minMoveThreshold = 5;
+var minMoveThreshold = 15;
 
 setInterval('checkMousePosition();', timeThreshold);
 
@@ -32,6 +32,7 @@ function captureMousePosition(e) {
   }
   
   console.log(mouseX + ' ' + mouseY);
+return true;
 }
 
 function captureMouseClick(e) {
@@ -44,7 +45,10 @@ function captureMouseClick(e) {
   lastMouseTime = 0;
   
   console.log(mouseX + ' ' + mouseY);
+return true;
 }
+
+midanimation = 0;
 
 function checkMousePosition() {
   if (mouseX == 0 || mouseY == 0)
@@ -55,20 +59,24 @@ function checkMousePosition() {
     
   if ((date.getTime() - timeThreshold) > mouseTime && (mouseX != lastMouseX || mouseY != lastMouseY)) {
     console.log('new position: ' + mouseX + ' ' + mouseY);
-    document.getElementById('touchcursor').style.opacity = '0.9';
-    document.getElementById('touchcursor').style.top = mouseY - (parseInt(document.getElementById('touchcursor').style.height) / 2) + 'px';
-    document.getElementById('touchcursor').style.left = mouseX - (parseInt(document.getElementById('touchcursor').style.width) / 2) + 'px';
+    setTimeout("document.getElementById('touchcursor').style.opacity = '0.9';",50);
+    setTimeout("document.getElementById('touchcursor').style.top = " + (mouseY - (parseInt(document.getElementById('touchcursor').style.height) / 2)) + " + 'px';",50);
+    setTimeout("document.getElementById('touchcursor').style.left = " + (mouseX - (parseInt(document.getElementById('touchcursor').style.width) / 2)) + " + 'px';",50);
     lastMouseX = mouseX;
     lastMouseY = mouseY;
     lastMouseTime = mouseTime;
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.8';", 100);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.7';", 200);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.6';", 300);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.5';", 400);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.4';", 500);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.3';", 600);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.2';", 700);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0.1';", 800);
-    setTimeout("document.getElementById('touchcursor').style.opacity = '0';", 900);
+midanimation++;
+
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.8';", 100);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.7';", 200);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.6';", 300);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.5';", 400);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.4';", 500);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.3';", 600);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.2';", 700);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0.1';", 800);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.opacity = '0';", 900);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.left = '-90px';", 900);
+    setTimeout("if (midanimation == " + midanimation + ") document.getElementById('touchcursor').style.left = '-90px';", 900);
   }
 }
