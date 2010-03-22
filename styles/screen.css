@@ -65,6 +65,11 @@ p{
 	height: 600px;
 }
 
+#pulse2 #upper{
+	background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E9E9E9));
+	height: 900px;
+}
+
 #lower{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#C3C3C3));
 	height: 200px;
@@ -150,7 +155,7 @@ p{
 .small_button .text p{
 	margin-bottom:8px;
 	font-size: 15px;
-	color: #858181;
+	color: black;
 	letter-spacing: 1px;
 	margin: 5px 10px;
 }

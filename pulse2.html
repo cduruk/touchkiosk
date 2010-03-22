@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/screen.css">
+  <title>Health Kiosk :: Pulse 2</title>
+  <style type="text/css" media="screen">
+    p{
+      margin-top:20px;
+      color:#584E4F;
+    }
+  </style>
+</head>
+<body id="pulse2" onload="changeScreenSize(1280,800)">
+  <div id="wrapper" class="">
+    <div id="upper" class="">
+      <div id="instructions" class="" style="width: 700px; margin: 0 auto; padding-top:200px; text-align:center;">
+        <p id="relax" style="font-size:3em;">
+          Please Relax...
+        </p>
+        <p id="measuring" style="font-size:1.75em; border-top: 1px solid #D2D2D2; border-bottom: 1px solid #D2D2D2; padding: 5px 30px; text-align:center;">
+          The system is currently measuring your pulse.
+        </p>
+        <div id="wait" class="" style="margin-top:40px; text-align:center;">
+          <img src="images/wait.png" alt="" title=""/>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="scripts/touch.js"><!-- SCRIPT tag must be located right before end of body --></script>
+<script type="text/javascript">
+document.getElementById('press').addEventListener('mousedown', function(){ setTimeout("window.location = 'pulse2.html';", 300); },false);
+
+</script>
+</body>
+</html>
