@@ -1,3 +1,7 @@
+*::selection {
+background: transparent;
+}
+
 body {
 	position:relative;
 	overflow-x:hidden;
