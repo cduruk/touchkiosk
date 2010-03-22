@@ -87,6 +87,18 @@ p{
 	margin: 0 auto;
 }
 
+#pulse2 #diagrams{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width:800px;
+	margin-left:180px;
+}
+
+#pulse2 #diagrams img{
+	padding: 4px;
+	border:1px solid black;
+}
+
 .big_button{
 	position:relative;
 	float:left;
