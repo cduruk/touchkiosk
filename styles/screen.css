@@ -1,6 +1,9 @@
 body {
+	position:relative;
 	overflow-x:hidden;
 	overflow-y:hidden;
+	top:0;
+	left:0;
 }
 
 p{
@@ -10,6 +13,8 @@ p{
 
 #wrapper{
 	width: 1280px;
+	top:0;
+	left:0;
 }
 
 .salutation, .instruction{
@@ -95,6 +100,7 @@ p{
 	color: white;
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 1px #555;
+	margin: 5px 10px;
 }
 
 #small_buttons{
@@ -130,6 +136,7 @@ p{
 	font-size: 15px;
 	color: #858181;
 	letter-spacing: 1px;
+	margin: 5px 10px;
 }
 
 #big1{
