@@ -3,111 +3,79 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
-  <link rel="stylesheet" type="text/css" href="styles/screen.css">
-  <title>Health Kiosk :: Index</title>
+  <link rel="stylesheet" type="text/css" href="styles/screen2.css">
+  <title>Health Kiosk v2:: Index</title>
 </head>
 <body id="index">
-  <div id="wrapper" class="">
-    <div id="upper" class="">
-      <div id="top" class="">
-        <div id="messages" class="">
-          <p class="salutation">
-            Hello Mary!
-          </p>
-          <p class="instruction">
-            What would you like to measure?
-          </p>
-          <p class="date">
-            May 18, 2010
-          </p>
-        </div>
-        <div id="logo" class="">
-
-        </div>
-      </div>
-      <div id="middle" class="">
-        <div id="big_buttons" class="">
-          <div id="line1" class="button_line">
-            <div id="big1" class="big_button">
-              <div id="" class="text">
-                <p>Blood Pressure</p>
-              </div>
-            </div>
-            <div id="big2" class="big_button">
-              <div id="" class="text">
-                <p>Weight Scale</p>
-              </div>
-            </div>
-            <div id="big3" class="big_button">
-              <div id="" class="text">
-                <p>Pulse Oxygen</p>
-              </div>
-            </div>
-            <div id="big4" class="big_button">
-              <div id="" class="text">
-                <p>Grip Evaluation</p>
-              </div>
-            </div>
+  <div id="top" class="">
+    
+    <div id="messages" class="content">
+      <p>
+        Hello Mary!
+      </p>
+      <p>
+        What would you like to measure?
+      </p>
+      <p class="date">
+        March 23, 2010
+      </p>
+    </div> <!-- end of #messages -->
+    
+    <div id="main" class="content">
+      
+      <ul id="first_line" class="big_buttons">
+        <li>
+          <div id="big1" class="big_button">
+            <p>Some Text</p>
           </div>
-          <div id="line2" class="button_line">
-            <div id="big5" class="big_button">
-              <div id="" class="text">
-                <p>Text Survey</p>
-              </div>
-            </div>
-            <div id="big6" class="big_button">
-              <div id="" class="text">
-                <p>Visual Test</p>
-              </div>
-            </div>
-            <div id="big7" class="big_button">
-              <div id="" class="text">
-                <p>Memory Test</p>
-              </div>
-            </div>
-            <div id="big8" class="big_button">
-              <div id="" class="text">
-                <p>Audio Survey</p>
-              </div>
-            </div>
+        </li>
+        <li>
+          <div id="big2" class="big_button">
+            <p>Some Text</p>
           </div>
-        </div>
-      </div>
-    </div>
-    <div id="lower" class="">
-      <div id="small_buttons" class="button_line">
-        
-        <div id="" class="small_button">
-          <div id="" class="text">
-            <p>Help</p>
+        </li>
+        <li>
+          <div id="big3" class="big_button">
+            <p>Some Text</p>
           </div>
-        </div>
-        
-        <div id="" class="small_button">
-          <div id="" class="text">
-            <p>Measurement History</p>
+        </li>
+        <li>
+          <div id="big4" class="big_button">
+            <p>Some Text</p>
           </div>
-        </div>
-        
-        <div id="" class="small_button">
-          <div id="" class="text">
-            <p>Messages</p>
+        </li>
+      </ul>
+      
+      <ul id="second_line" class="big_buttons">
+        <li>
+          <div id="big5" class="big_button">
+            <p>Some Text</p>
           </div>
-        </div>
-        
-        <div id="" class="small_button">
-          <div id="" class="text">
-            <p>Exit</p>
+        </li>
+        <li>
+          <div id="big6" class="big_button">
+            <p>Some Text</p>
           </div>
-        </div>
-        
-      </div>
+        </li>
+        <li>
+          <div id="big7" class="big_button">
+            <p>Some Text</p>
+          </div>
+        </li>
+        <li>
+          <div id="big8" class="big_button">
+            <p>Some Text</p>
+          </div>
+        </li>
+      </ul>
+      
+    </div> <!-- end #main -->
+  </div> <!-- end #top -->
+  
+  <div id="bottom" class="">
+    <div id="bottom_main" class="content">
+      
     </div>
   </div>
-<script type="text/javascript" src="scripts/touch.js"><!-- SCRIPT tag must be located right before end of body --></script>
-<script type="text/javascript">
-document.getElementById('big3').addEventListener('mousedown', function(){ dosound(); setTimeout("window.location = 'pulse.html';", 800); },false);
-
-</script>
 </body>
 </html>

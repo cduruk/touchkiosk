@@ -1,0 +1,75 @@
+/**** General Stuff ****/
+
+*::selection {
+background: transparent;
+}
+
+body {
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+.content {
+  width: 850px;
+  margin: 0 auto;
+}
+
+#top{
+  padding-top:40px;
+  height: 580px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E9E9E9));
+}
+
+#bottom{
+  height: 200px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#C3C3C3));
+}
+
+p {
+  font-family: "Helvtica", Arial, sans-serif;
+  color:#584E4F;
+  font-weight:bold;
+}
+
+/**** Home Page ****/
+
+#index #top #messages{
+  position:relative;
+  height:75px;
+  border-bottom: 1px solid #584E4F;
+}
+
+#index #top #messages p{
+  font-size:2em;
+}
+
+#index #top #messages p:nth-child(2){
+  float:left;
+}
+
+#index #top #messages p.date{
+  position:absolute;
+  color: #908283;
+  font-size: 1.25em;
+  right: 0;
+  bottom: 0;
+}
+
+#index .big_button{
+  position:relative;
+	float:left;
+	
+	width: 164px;
+	height: 164px;
+	margin-right: 40px;
+
+	
+	border: 1px solid white;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 4px 5px 5px rgba(170, 170, 170, 0.5)
+}
+
+#index li:last-child div{
+  margin-right:0px;
+}
+
