@@ -28,6 +28,10 @@
   text-shadow: 1px 1px 1px #555;	
 }
 
+#index #top #top_main .big_button img{
+  padding-top: 10px;
+}
+
 #index #top #top_main div.big_button:last-child{
   margin-right:0px;
 }
@@ -46,16 +50,34 @@
 	background: -webkit-gradient(linear, left top, left bottom, from(#EF7D81), to(#DC1F2F));
 }
 
+#index #top #top_main #big1 img{
+  padding-top: 18px;
+}
+
 #big2{
 	background: -webkit-gradient(linear, left top, left bottom, from(#8987D0), to(#5825BC));
+}
+
+#index #top #top_main #big2 img{
+  padding-top: 35px;
 }
 
 #big3{
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFBB52), to(#E76D00));
 }
 
+
+#index #top #top_main #big3 img{
+  padding-top: 25px;
+}
+
 #big4{
 	background: -webkit-gradient(linear, left top, left bottom, from(#5DC0A5), to(#008271));
+}
+
+
+#index #top #top_main #big4 img{
+  padding-top: 20px;
 }
 
 #big5{
@@ -66,10 +88,18 @@
 	background: -webkit-gradient(linear, left top, left bottom, from(#E3C342), to(#AA7E00));
 }
 
+#index #top #top_main #big6 img{
+  padding-top: 20px;
+}
+
 #big7{
 	background: -webkit-gradient(linear, left top, left bottom, from(#69C568), to(#108B22));
 }
 
 #big8{
 	background: -webkit-gradient(linear, left top, left bottom, from(#E274CB), to(#B9009B));
+}
+
+#index #top #top_main #big8 img{
+  padding-top: 20px;
 }
