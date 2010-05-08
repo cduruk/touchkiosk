@@ -68,10 +68,13 @@
             Help
           </p>
         </div>
-        <div id="small1_tooltip" style="display: none; height: 300px; width: 200px; background-color: lightblue;">
-            test THIS IS THE TOOLTIP...
+        <div id="small1_tooltip" style="display: none; height: 498px; width: 578px; background-image: url(images/leftpopover.png); margin-left: 160px;">
+            <div style="margin: 30px;">
+                THIS IS THE TOOLTIP 
+                <a href="#" onclick="$('#small1_tooltip').hide(); $.unblockUI();">Close the tooltip</a>.. there's a little bug here, where after u close the tooltip it doesnt open it again... but we can refresh the page after click or figure it out
+            </div>
             
-            <a href="#" onclick="$('#small1_tooltip').hide(); $.unblockUI();">Close the tooltip</a>.. there's a little bug here, where after u close the tooltip it doesnt open it again... but we can refresh the page after click or figure it out
+            
         </div>
         <div id="small2" class="small_button">
           <p>
