@@ -17,7 +17,7 @@
 }
 
 #index #top #top_main .big_button p{
-  position:absolute;
+/*  position:absolute;*/
   bottom:5px;
   margin:3px 20px;
   
@@ -26,6 +26,7 @@
   
   color:white;
   text-shadow: 1px 1px 1px #555;	
+  
 }
 
 #index #top #top_main .big_button img{
