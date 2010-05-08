@@ -72,7 +72,8 @@ p {
 	border: 2px solid #CCC;
 	-webkit-border-radius: 10px;
 	-webkit-box-shadow: 4px 4px 4px rgba(170, 170, 170, 0.5);
-	background-color: white;
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#D6D6D6));
 	
 	text-align:center;
 }
