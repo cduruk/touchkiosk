@@ -70,7 +70,7 @@
   
   <div id="bottom" class="">
     <div id="bottom_main" class="content">
-      <div id="small_first_line" class="small_button_line">
+      <div id="small_first_line" class="small_button_line" style="white-space: no-wrap;">
         <div id="small1" class="small_button">
           <p>
             Help
@@ -96,10 +96,21 @@
             Messages
           </p>
         </div>
-        <div id="small4" class="small_button">
+        <div id="small4" class="small_button" style="margin-top: -123px; margin-left: 605px;">
           <p>
             Exit
           </p>
+        </div>
+        <div id="small4_tooltip" style="display: none; height: 498px; width: 578px; background-image: url(images/rightpopover.png); margin-left: -160px;">
+            <div style="margin: 30px;">
+                <p style="font-family: Helvetica; font-size: 36px;">Do you want to exit?</p>
+                
+                <a href="#" style="display: block; margin-top: 20px;"><img src="images/tap_end_visit.png"></a><br>
+                <center><p style="font-family: Helvetica; font-size: 24px; color: #c0c0c0; margin-top: -10px; margin-bottom: 8px;">(Your results will be saved)</p></center><br>
+                <a href="#" onclick="$('#small1_tooltip').hide(); $.unblockUI(); location.reload(true);"><img src="images/tap_continue_visit.png"></a>
+            </div>
+            
+            
         </div>
       </div>
     </div>
@@ -119,6 +130,19 @@
   	    // When the tooltip is shown, block the UI and then bring the tooltip above the UI block.
     	$.blockUI({ message: null, overlayCSS: { opacity: 0.3 } });
     	$('#small1_tooltip').css('z-index', '999999');
+    }
+  });
+  
+  
+  $('#small4').tooltip({
+  	events: {
+  		def: 'mousedown, null',
+  		tooltip: 'null, null'
+  	},
+  	onShow: function() {
+  	    // When the tooltip is shown, block the UI and then bring the tooltip above the UI block.
+    	$.blockUI({ message: null, overlayCSS: { opacity: 0.3 } });
+    	$('#small4_tooltip').css('z-index', '999999');
     }
   });
   </script>
