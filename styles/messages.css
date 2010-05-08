@@ -1,0 +1,43 @@
+/**** Home Page ****/
+
+#index #top #top_main .big_button{
+  position:relative;
+	float:left;
+	
+	width: 164px;
+	height: 164px;
+	margin-right: 40px;
+  margin-bottom: 40px;
+
+	text-align:center;
+}
+
+#index #top #top_main .big_button p{
+/*  position:absolute;*/
+  
+  line-height: 1em;
+  font-size: 1.1em;
+  
+  margin-top:-20px;
+  margin-left: 40px;
+  
+  color:#919191;
+  
+}
+
+#index #top #top_main .big_button img{
+  padding-top: 10px;
+}
+
+#index #top #top_main div.big_button:last-child{
+  margin-right:0px;
+}
+
+#index #top #top_main{
+  padding-top:30px;
+}
+
+#index #top #top_main #big_first_line, #index #top #top_main #big_second_line{
+  width: 800px;
+  margin: 0 auto;
+}
