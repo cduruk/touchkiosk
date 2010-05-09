@@ -82,6 +82,30 @@ p {
   margin-right:0px;
 }
 
+#bottom #bottom_main #small1{
+  background-image: url(../images/helpbutton.png);
+  background-repeat:no-repeat;
+  background-position: center 15px
+}
+
+#bottom #bottom_main #small2{
+  background-image: url(../images/history.png);
+  background-repeat:no-repeat;
+  background-position: center 15px
+}
+
+#bottom #bottom_main #small3{
+  background-image: url(../images/messages.png);
+  background-repeat:no-repeat;
+  background-position: center 27px
+}
+
+#bottom #bottom_main #small4{
+  background-image: url(../images/exit.png);
+  background-repeat:no-repeat;
+  background-position: center 15px
+}
+
 #bottom #bottom_main .small_button p{
   position:absolute;
   bottom:8px;
