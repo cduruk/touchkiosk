@@ -12,6 +12,12 @@
   <title>Health Kiosk v2 :: Index</title>
 </head>
 <body id="index">
+      <div id="message-prompt" style="width: 787px; height: 605px; background-image: url(images/messages/message.png); display: none;">
+        <div style="padding-top: 480px; padding-left: 50px;">
+            <img src="images/messages/button-1.png">
+            <img src="images/messages/button-2.png"> 
+        </div>
+      </div>
   <div id="top" class="">
     
     <div id="messages" class="content">
@@ -126,10 +132,11 @@
       </div>
     </div>
   </div>
+
   <script src="scripts/jquery.tools.min.js"></script>
   <script type="text/javascript" src="scripts/touch.js"><!-- SCRIPT tag must be located right before end of body --></script>
   <script type="text/javascript">
-  document.getElementById('big3').addEventListener('mousedown', function(){ dosound(); setTimeout("window.location = 'pulse1.html';", 800); },false);
+  // document.getElementById('big3').addEventListener('mousedown', function(){ dosound(); setTimeout("window.location = 'pulse1.html';", 800); },false);
 
   // This is the tooltip trigger.
   $('#small1').tooltip({
@@ -142,6 +149,12 @@
     	$.blockUI({ message: null, overlayCSS: { opacity: 0.3 } });
     	$('#small1_tooltip').css('z-index', '999999')
     }
+  });
+  
+  // This is the envelope trigger.
+  $('#env-1').mousedown(function() { 
+//      alert('test');
+    $.blockUI({ message: $('#message-prompt'), css: { width: '787px', height: '605px', marginLeft: '-154px', marginTop: '-302px' } });
   });
   </script>
 </body>
