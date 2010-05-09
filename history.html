@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/screen.css">
+  <!-- <link rel="stylesheet" type="text/css" href="styles/index.css"> -->
+  <link rel="stylesheet" type="text/css" href="styles/messages.css">
+  
+  <title>Health Kiosk v2 :: Index</title>
+</head>
+<body id="index">
+      <div id="message-prompt" style="width: 787px; height: 605px; background-image: url(images/messages/message.png); display: none;">
+        <div style="padding-top: 480px; padding-left: 50px;">
+            <img src="images/messages/button-1.png">
+            <img src="images/messages/button-2.png"> 
+        </div>
+      </div>
+  <div id="top" class="">
+    
+    <div id="messages" class="content">
+      <p>
+        Measurement History
+      </p>
+      <p style="font-size: 20px;">
+        Select the test you would like to view.
+      </p>
+      <p class="date">
+        March 23, 2010
+      </p>
+    </div> <!-- end of #messages -->
+    
+    <div id="top_main" class="content">
+      
+        <img src="images/measurement_history.png" style="margin-left: -170px">
+      
+    </div> <!-- end #main -->
+  </div> <!-- end #top -->
+  
+  <div id="bottom" class="">
+    <div id="bottom_main" class="content">
+      <div id="small_first_line" class="small_button_line">
+        <div id="small1" class="small_button">
+          <p>
+            Help
+          </p>
+        </div>
+        <div id="small1_tooltip" style="display: none; height: 300px; width: 200px; background-color: lightblue;">
+            test THIS IS THE TOOLTIP...
+            
+            <a href="#" onclick="$('#small1_tooltip').hide(); $.unblockUI();">Close the tooltip</a>.. there's a little bug here, where after u close the tooltip it doesnt open it again... but we can refresh the page after click or figure it out
+        </div>
+        <div id="small2" class="small_button">
+          <p>
+            Past Measurements
+          </p>
+        </div>
+        <div id="small3" class="small_button">
+          <p>
+            Messages
+          </p>
+        </div>
+        <div id="small4" class="small_button">
+          <p>
+            Exit
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/jquery.tools.min.js"></script>
+  <script type="text/javascript" src="scripts/touch.js"><!-- SCRIPT tag must be located right before end of body --></script>
+  <script type="text/javascript">
+  // document.getElementById('big3').addEventListener('mousedown', function(){ dosound(); setTimeout("window.location = 'pulse1.html';", 800); },false);
+
+  // This is the tooltip trigger.
+  $('#small1').tooltip({
+  	events: {
+  		def: 'mousedown, null',
+  		tooltip: 'null, null'
+  	},
+  	onShow: function() {
+  	    // When the tooltip is shown, block the UI and then bring the tooltip above the UI block.
+    	$.blockUI({ message: null, overlayCSS: { opacity: 0.3 } });
+    	$('#small1_tooltip').css('z-index', '999999')
+    }
+  });
+  
+
+  </script>
+</body>
+</html>
