@@ -83,25 +83,25 @@ p {
 }
 
 #bottom #bottom_main #small1{
-  background-image: url(../images/helpbutton.png);
+  background-image: url(../images/bottom/help.png);
   background-repeat:no-repeat;
   background-position: center 15px
 }
 
 #bottom #bottom_main #small2{
-  background-image: url(../images/history.png);
+  background-image: url(../images/bottom/history.png);
   background-repeat:no-repeat;
   background-position: center 15px
 }
 
 #bottom #bottom_main #small3{
-  background-image: url(../images/messages.png);
+  background-image: url(../images/bottom/messages.png);
   background-repeat:no-repeat;
   background-position: center 27px
 }
 
 #bottom #bottom_main #small4{
-  background-image: url(../images/exit.png);
+  background-image: url(../images/bottom/exit.png);
   background-repeat:no-repeat;
   background-position: center 15px
 }
