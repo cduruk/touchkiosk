@@ -62,7 +62,7 @@
             Messages
           </p>
         </div>
-        <div id="small4" class="small_button">
+        <div style="background-image: url(images/bottom/home.png);background-repeat:no-repeat;background-position: center 10px;" id="homebutton" class="small_button">
           <p>
             Exit
           </p>
@@ -75,6 +75,8 @@
   <script type="text/javascript" src="scripts/touch.js"><!-- SCRIPT tag must be located right before end of body --></script>
   <script type="text/javascript">
   // document.getElementById('big3').addEventListener('mousedown', function(){ dosound(); setTimeout("window.location = 'pulse1.html';", 800); },false);
+
+  document.getElementById('homebutton').addEventListener('mousedown', function(){ dosound(); setTimeout("window.location = 'index.html';", 800); },false);
 
   // This is the tooltip trigger.
   $('#small1').tooltip({

@@ -53,3 +53,10 @@
   height:62px;
   background-image: url(../images/messages/button-2.png);
 }
+
+
+#homebutton{
+  background-image: url(../images/bottom/home.png);
+  background-repeat:no-repeat;
+  background-position: center 15px;
+}
