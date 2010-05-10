@@ -13,9 +13,12 @@
 </head>
 <body id="index">
       <div id="message-prompt" style="width: 787px; height: 605px; background-image: url(images/messages/message.png); display: none;">
-        <div style="padding-top: 480px; padding-left: 50px;">
-            <img src="images/messages/button-1.png">
-            <img src="images/messages/button-2.png"> 
+        <div style="padding-top: 480px; padding-left: 10px;">
+          <img id="close" src="images/messages/close.png" alt=""/>
+          <img id="voicemail" src="images/messages/voicemail.png" alt=""/>
+          <img style="display:none;" id="stoprecording" src="images/messages/stoprecording.png" alt="">
+          <img style="display:none;" id="send" src="images/messages/send.png" alt="">
+          <img src="images/messages/print.png" alt=""/>
         </div>
       </div>
   <div id="top" class="">
@@ -153,8 +156,21 @@
   
   // This is the envelope trigger.
   $('#env-1').mousedown(function() { 
-//      alert('test');
     $.blockUI({ message: $('#message-prompt'), css: { width: '787px', height: '605px', marginLeft: '-154px', marginTop: '-302px' } });
+  });
+  
+  $('#voicemail').mousedown(function(){
+    $('#voicemail').toggle();
+    $('#stoprecording').toggle();
+  });
+  
+  $('#stoprecording').mousedown(function(){
+    $('#stoprecording').toggle();
+    $('#send').toggle();
+  });
+  
+  $('#close').mousedown(function(){
+    $.unblockUI();
   });
   </script>
 </body>

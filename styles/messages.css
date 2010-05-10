@@ -41,3 +41,15 @@
   width: 800px;
   margin: 0 auto;
 }
+
+.short_button {
+  width:186px;
+  height:63px;
+  background-image: url(../images/messages/button-1.png);
+}
+
+.long_button {
+  width:305px;
+  height:62px;
+  background-image: url(../images/messages/button-2.png);
+}
