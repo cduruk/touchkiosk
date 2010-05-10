@@ -28,7 +28,7 @@
         Hello Mary!
       </p>
       <p>
-        What would you like to measure?
+        Tap an envelope to read the message.
       </p>
       <p class="date">
         March 23, 2010
@@ -171,6 +171,10 @@
   
   $('#close').mousedown(function(){
     $.unblockUI();
+    $('#stoprecording').hide();
+    $('#send').hide();
+    $('#voicemail').show();
+    
   });
   </script>
 </body>
