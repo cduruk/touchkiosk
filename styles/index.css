@@ -87,6 +87,7 @@
 
 #big5{
 	background: -webkit-gradient(linear, left top, left bottom, from(#7FC8FA), to(#3685DF));
+	-webkit-box-shadow: 7px 6px 6px rgba(255, 134, 1, 0.5);
 }
 
 #big5 img{
