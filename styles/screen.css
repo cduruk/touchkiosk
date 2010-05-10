@@ -34,6 +34,7 @@ p {
 #top #messages{
   position:relative;
   height:75px;
+  padding-bottom:7px;
   border-bottom: 1px solid #CCC;
 }
 
