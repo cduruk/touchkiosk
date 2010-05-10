@@ -14,10 +14,14 @@
 <body id="index">
       <div id="message-prompt" style="width: 787px; height: 605px; background-image: url(images/messages/message.png); display: none;">
         <div style="padding-top: 480px; padding-left: 10px;">
+          <img id="recording" style="margin-top:-40px;display:none;" src="images/messages/recording.png" alt="">
+          <img id="finished" style="margin-top:-40px;display:none;" src="images/messages/finished.png" alt="">
+          <br/>
           <img id="close" src="images/messages/close.png" alt=""/>
           <img id="voicemail" src="images/messages/voicemail.png" alt=""/>
           <img style="display:none;" id="stoprecording" src="images/messages/stoprecording.png" alt="">
           <img style="display:none;" id="send" src="images/messages/send.png" alt="">
+          <img style="display:none;" id="sent" src="images/messages/sent.png" alt="">
           <img src="images/messages/print.png" alt=""/>
         </div>
       </div>
@@ -162,16 +166,28 @@
   $('#voicemail').mousedown(function(){
     $('#voicemail').toggle();
     $('#stoprecording').toggle();
+    $('#recording').toggle();
   });
   
   $('#stoprecording').mousedown(function(){
     $('#stoprecording').toggle();
     $('#send').toggle();
+    $('#recording').toggle();
+    $('#finished').toggle();
+  });
+  
+  $('#send').mousedown(function(){
+    $('#send').toggle();
+    $('#sent').toggle();
+    $('#finished').toggle();
   });
   
   $('#close').mousedown(function(){
     $.unblockUI();
     $('#stoprecording').hide();
+    $('#sent').hide();
+    $('#recording').hide();
+    $('#finished').hide();
     $('#send').hide();
     $('#voicemail').show();
     
