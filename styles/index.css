@@ -52,7 +52,7 @@
 }
 
 #index #top #top_main #big1 img{
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 #big2{
@@ -87,6 +87,10 @@
 
 #big5{
 	background: -webkit-gradient(linear, left top, left bottom, from(#7FC8FA), to(#3685DF));
+}
+
+#big5 img{
+  margin-top: -10px;
 }
 
 #big6{
